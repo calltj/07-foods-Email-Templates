@@ -7,7 +7,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            background-color: #ffffb0;
             margin: 0;
             padding: 0;
             display: flex;
@@ -32,7 +32,7 @@
         }
         .header h1 {
             font-size: 20px;
-            color: #333;
+            color: #c91515;
             margin: 10px 0 0;
         }
         .event-details, .ticket-details, .payment-summary {
@@ -46,15 +46,17 @@
             width: 100%;
             border-collapse: collapse;
             margin: 10px 0;
+            border-radius: 10px;
+            overflow: hidden;
         }
         .ticket-table th, .ticket-table td {
-            border: 1px solid #e0e0e0;
+            border: 1px solid #f2f2f2;
             padding: 10px;
             text-align: left;
         }
         .ticket-table th {
-            background-color: #f9f9f9;
-            color: #333;
+            background-color:  #c1c70c;
+            color: #ffffff;
         }
         .qr-code {
             text-align: center;
@@ -65,14 +67,17 @@
         }
         .footer {
             text-align: center;
-            color: #777;
-            font-size: 14px;
-            border-top: 1px solid #e0e0e0;
-            padding-top: 15px;
+            padding: 20px 0;
+            border-top: 2px solid #eaeaea;
+            color: #ffffff;
+            background-color:#c1c70c;
         }
         .footer a {
             color: #007BFF;
             text-decoration: none;
+        }
+        .event-details h3, .ticket-details h3, .payment-summary h3{
+            color: #c91515;
         }
     </style>
     <script>
