@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Receipt</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        .receipt-container {
+            max-width: 600px;
+            margin: 50px auto;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+        .logo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .logo img {
+            width: 100px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .header h1 {
+            font-size: 24px;
+            margin: 0;
+        }
+        .details {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            font-size: 14px;
+            color: #666;
+        }
+        .details div {
+            line-height: 1.5;
+        }
+        .content {
+            background: #f3f3f3;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .content .item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        .content .item:last-child {
+            margin-bottom: 0;
+        }
+        .content .item span {
+            font-size: 16px;
+        }
+        .content .item .label {
+            color: #666;
+        }
+        .total {
+            text-align: right;
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        .footer {
+            text-align: center;
+            font-size: 12px;
+            color: #666;
+        }
+        .footer a {
+            color: yellow;
+        }
+    </style>
+    <script>
+        function updateTime() {
+            const now = new Date();
+            const dateString = now.toLocaleString();
+            document.getElementById('current-time').innerText = dateString;
+        }
+        setInterval(updateTime, 1000);
+    </script>
+</head>
+<body onload="updateTime()">
+    <div class="receipt-container">
+        <div class="logo">
+            <img src="https://i.postimg.cc/bvfzvv3D/07-FOODS-LOGO-WITH-SLOGAN-1-1.png" alt="Company Logo" style="width: 200px; height: auto; margin: 0 auto; display: block;">
+        <div class="header">
+            <h1>Receipt</h1>
+        </div>
+        <div class="details">
+            <div>
+                <strong>Order ID</strong><br>
+                [Order ID]
+            </div>
+            <div>
+                <strong>PURCHASE DATE</strong><br>
+                <span id="current-time"></span>
+            </div>
+        </div>
+        <div class="content">
+            <div class="item">
+                <span>Cheese Burger</span>
+                <span>3</span>
+                <span>₦9,000.00</span>
+            </div>
+            <hr>
+            <div class="item">
+                <span>Egusi and Goat Meat</span>
+                <span>2</span>
+                <span>₦10,000.00</span>
+            </div>
+            <hr>
+            <div class="item">
+                <span>Total tax</span>
+                <span>₦1,425.00</span>
+            </div>
+            <div class="item">
+                <span class="label">VAT (7.5%)</span>
+            </div>
+            <hr>
+            <div class="item">
+                <span>Payment method</span>
+                <span>Debit Card</span>
+            </div>
+        </div>
+        <div class="total">
+            Total: ₦20,425.00
+        </div>
+        <div class="footer">
+            Your purchase is subject to our <a href="#">Terms & Conditions</a>.
+        </div>
+    </div>
+</body>
+</html>
