@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Verification Email</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+      }
+      .email-container {
+        max-width: 600px;
+        margin: 20px auto;
+        background: #ffffff;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        overflow: hidden;
+      }
+      .header {
+        background-color: yellow;
+        color: #ffffff;
+        padding: 20px;
+        text-align: center;
+      }
+      .header img {
+        max-width: 120px;
+      }
+      .content {
+        padding: 20px;
+        color: #333333;
+        text-align: center;
+      }
+      .content h1 {
+        font-size: 24px;
+        margin-bottom: 10px;
+        color: red;
+      }
+      .verification-code {
+        font-size: 32px;
+        font-weight: bold;
+        color: red;
+        text-align: center;
+        margin: 20px 0;
+      }
+      .footer {
+        background-color: #f4f4f4;
+        color: #666666;
+        font-size: 12px;
+        text-align: center;
+        padding: 10px;
+        border-top: 1px solid #ddd;
+      }
+      .details {
+        margin-top: 20px;
+        font-size: 14px;
+        color: #555555;
+      }
+      .details p {
+        margin: 5px 0;
+      }
+    </style>
+    <script>
+      function updateTime() {
+        const now = new Date();
+        const dateString = now.toLocaleString();
+        document.getElementById("current-time").innerText = dateString;
+      }
+      setInterval(updateTime, 1000);
+    </script>
+  </head>
+  <body onload="updateTime()">
+    <div class="email-container">
+      <div class="header">
+        <img
+          src="https://i.postimg.cc/bvfzvv3D/07-FOODS-LOGO-WITH-SLOGAN-1-1.png"
+          alt="Company Logo"
+          style="width: 200px; height: 100px; margin: 0 auto; display: block"
+        />
+      </div>
+      <div class="content">
+        <h1>Hello [Name]</h1>
+        <p>
+          Enter the 6-digit code below to finish setting up your 07foods
+          account.
+        </p>
+        <div class="verification-code">[Code]</div>
+        <p>Thanks for helping us keep your account secure.</p>
+        <p>- 07foods team</p>
+        <div class="details">
+          <h3>When and where this happened:</h3>
+          <p><strong>Date:</strong><span id="current-time"></span></p>
+          <p><strong>Operating System:</strong> Unknown</p>
+          <p><strong>Browser:</strong> Unknown</p>
+          <p><strong>Approximate Location:</strong> Lagos, Lagos, Nigeria</p>
+        </div>
+      </div>
+      <div class="footer">
+        This is an automated message. Please do not reply.
+      </div>
+    </div>
+  </body>
+</html>
