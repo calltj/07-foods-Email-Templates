@@ -1,117 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Email Template</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            font-size: 18px;
-            margin: 0;
-            padding: 0;
-            background-color: #ffffb0;
-        }
-        .container {
-            width: 100%;
-            max-width: 600px;
-            margin: 20px auto;
-            background-color: #ffffff;
-            padding: 20px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 15px;
-            color:#000000
-        }
-        .header {
-            text-align: center;
-            padding: 10px 0;
-            border-bottom: 2px solid #eaeaea;
-            background-color:#ffffff;
-            color: #ffffff;
-        }
-        .header h2 {
-            margin: 0;
-            /* Remove the color property or set it to inherit */
-            color: #c91515;
-        }
-        .button {
-            display: inline-block;
-            padding: 10px 20px;
-            margin: 20px 0;
-            background-color: #c91515;
-            color: #ffffff;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: transform 0.3s; /* Smooth growing effect */
-        }
-        .button:hover {
-            transform: scale(1.2); /* Scale button by 20% */
-        }
-        .header img {
-            width: 100px;
-            margin-bottom: 10px;
-        }
-        
-        
-        .content {
-            padding: 20px 0;
-            background-color: #ffffff;
-        }
-        .content p {
-            margin: 10px 0;
-        }
-        .table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        .table th,
-        .table td {
-            text-align: left;
-            padding: 10px;
-            border-bottom: 1px solid #eaeaea;
-        }
-        .table th {
-            background-color: #f8f8f8;
-            color: #555;
-        }
-        .footer {
-            text-align: center;
-            padding: 20px 0;
-            border-top: 2px solid #eaeaea;
-            color: #ffffff;
-            background-color: #c1c70c;
-        }
-        .footer p {
-            margin: 5px 0;
-        }
+      body {
+        font-family: Arial, sans-serif;
+        font-size: 18px;
+        margin: 0;
+        padding: 0;
+        background-color: #ffffb0;
+      }
+      .container {
+        width: 100%;
+        max-width: 600px;
+        margin: 20px auto;
+        background-color: #ffffff;
+        padding: 20px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 15px;
+        color: #000000;
+      }
+      .header {
+        text-align: center;
+        padding: 10px 0;
+        border-bottom: 2px solid #eaeaea;
+        background-color: #ffffff;
+        color: #ffffff;
+      }
+      .header h2 {
+        margin: 0;
+        /* Remove the color property or set it to inherit */
+        color: #c91515;
+      }
+      .button {
+        display: block;
+        padding: 10px 20px;
+        margin: 20px auto;
+        background-color: #c91515;
+        color: #ffffff;
+        text-decoration: none;
+        border-radius: 5px;
+        text-align: center;
+        transition: transform 0.3s; /* Smooth growing effect */
+        width: 200px;
+      }
+      .button:hover {
+        transform: scale(1.1); /* Scale button by 20% */
+      }
+      .header img {
+        width: 100px;
+        margin-bottom: 10px;
+      }
+
+      .content {
+        padding: 20px 0;
+        background-color: #ffffff;
+      }
+      .content p {
+        margin: 10px 0;
+      }
+      .table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      .table th,
+      .table td {
+        text-align: left;
+        padding: 10px;
+        border-bottom: 1px solid #eaeaea;
+      }
+      .table th {
+        background-color: #f8f8f8;
+        color: #555;
+      }
+      .footer {
+        text-align: center;
+        padding: 20px 0;
+        border-top: 2px solid #eaeaea;
+        color: #ffffff;
+        background-color: #c1c70c;
+      }
+      .footer p {
+        margin: 5px 0;
+      }
     </style>
     <script>
-        function updateTime() {
-            const now = new Date();
-            const dateString = now.toLocaleString();
-            document.getElementById('current-time').innerText = dateString;
-        }
-        setInterval(updateTime, 1000);
+      function updateTime() {
+        const now = new Date();
+        const dateString = now.toLocaleString();
+        document.getElementById("current-time").innerText = dateString;
+      }
+      setInterval(updateTime, 1000);
     </script>
-    <img src="https://i.postimg.cc/bvfzvv3D/07-FOODS-LOGO-WITH-SLOGAN-1-1.png" alt="Company Logo" style="width: 200px; height: auto; margin: 0 auto; display: block;">
-</head>
-<body onload="updateTime()">
+    <img
+      src="https://i.postimg.cc/bvfzvv3D/07-FOODS-LOGO-WITH-SLOGAN-1-1.png"
+      alt="Company Logo"
+      style="width: 200px; height: auto; margin: 0 auto; display: block"
+    />
+  </head>
+  <body onload="updateTime()">
     <div class="container">
-        <div class="header">
-            
-            <h2>Verify Your Account</h2>
-        </div>
-        <div class="content">
-            <p>Hello, [Name],</p>
-            <p>You Created a new 07 foods account. Please click on the button below to finish setting up your account </p>
-            <a href="#" class="button">Verify Email</a>
-            <p>If it was not you please Ignore this mail</p>
-        </div>
-        <div class="footer">
-            
-            <p>We are happy to have you On Board!</p>
-            <p>Regards,<br><strong>07 Foods Team</strong></p>
-        </div>
+      <div class="header">
+        <h2>Verify Your Account</h2>
+      </div>
+      <div class="content">
+        <p>Hello, [Name],</p>
+        <p>
+          You Created a new 07 foods account. Please click on the button below
+          to finish setting up your account
+        </p>
+        <a href="#" class="button">Verify Email</a>
+        <p>If it was not you please Ignore this E-mail</p>
+      </div>
+      <div class="footer">
+        <p>We are happy to have you On Board!</p>
+        <p>Regards,<br /><strong>07 Foods Team</strong></p>
+      </div>
     </div>
-</body>
+  </body>
 </html>

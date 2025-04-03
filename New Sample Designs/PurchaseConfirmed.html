@@ -1,128 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Purchase Confirmation</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-        }
-        .container {
-            max-width: 600px;
-            margin: 20px auto;
-            background: #fff;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            padding: 20px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-        .header {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .header img {
-            width: 100px;
-        }
-        .header h1 {
-            font-size: 20px;
-            color: #333;
-        }
-        .button {
-            display: block;
-            width: 100%;
-            text-align: center;
-            background-color: #1a73e8;
-            color: #fff;
-            text-decoration: none;
-            padding: 10px 0;
-            border-radius: 5px;
-            margin: 20px 0;
-            font-weight: bold;
-        }
-        .details {
-            font-size: 14px;
-            color: #555;
-            line-height: 1.6;
-        }
-        .details table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 10px;
-        }
-        .details table th, .details table td {
-            text-align: left;
-            padding: 8px;
-            border-bottom: 1px solid #ddd;
-        }
-        .details table th {
-            color: #333;
-        }
-        .footer {
-            font-size: 12px;
-            color: #777;
-            margin-top: 20px;
-            text-align: center;
-        }
-        .footer a {
-            color: #1a73e8;
-            text-decoration: none;
-        }
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f9f9f9;
+      }
+      .container {
+        max-width: 600px;
+        margin: 20px auto;
+        background: #fff;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 20px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      .header {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .header img {
+        width: 100px;
+      }
+      .header h1 {
+        font-size: 20px;
+        color: #333;
+      }
+      .button {
+        display: block;
+        width: 100%;
+        text-align: center;
+        background-color: #1a73e8;
+        color: #fff;
+        text-decoration: none;
+        padding: 10px 0;
+        border-radius: 5px;
+        margin: 20px 0;
+        font-weight: bold;
+      }
+      .details {
+        font-size: 14px;
+        color: #555;
+        line-height: 1.6;
+      }
+      .details table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 10px;
+      }
+      .details table th,
+      .details table td {
+        text-align: left;
+        padding: 8px;
+        border-bottom: 1px solid #ddd;
+      }
+      .details table th {
+        color: #333;
+      }
+      .footer {
+        font-size: 12px;
+        color: #777;
+        margin-top: 20px;
+        text-align: center;
+      }
+      .footer a {
+        color: #c91515;
+        text-decoration: underline;
+      }
     </style>
     <script>
-        function updateTime() {
-            const now = new Date();
-            const dateString = now.toLocaleString();
-            document.getElementById('current-time').innerText = dateString;
-        }
-        setInterval(updateTime, 1000);
+      function updateTime() {
+        const now = new Date();
+        const dateString = now.toLocaleString();
+        document.getElementById("current-time").innerText = dateString;
+      }
+      setInterval(updateTime, 1000);
     </script>
-</head>
-<body onload="updateTime()">
+  </head>
+  <body onload="updateTime()">
     <div class="container">
-        <div class="header">
-            <img src="https://i.postimg.cc/bvfzvv3D/07-FOODS-LOGO-WITH-SLOGAN-1-1.png" alt="Company Logo" style="width: 200px; height: auto; margin: 0 auto; display: block;">
-            <h1>Thank you</h1>
-            <p>Your Meal Purchase has been confirmed!</p>
-        </div>
-        
-        <div class="details">
-            <p><strong>Order ID:</strong> [Order ID]</p>
-            <p><strong>Order date:</strong> <span id="current-time"></span></p>
-            <p><strong>Name:</strong>[User Name]</p>
-            <table>
-                <tr>
-                    <th>Item</th>
-                    <th>Qty</th>
-                    <th>Unit Price</th>
-                    <th>Total price</th>
-                </tr>
-                <tr>
-                    <td>Cheese Burger</td>
-                    <td>3</td>
-                    <td>₦3,000</td>
-                    <td>₦9,000</td>
-                </tr>
-                <tr>
-                    <td>Egusi and Goat Meat</td>
-                    <td>2</td>
-                    <td>₦5,000</td>
-                    <td>₦10,000</td>
-                </tr>
-            </table>
-            <p><strong>SubTotal:</strong> ₦19,000.00<br>(Includes VAT of ₦17.44)</p>
-            <p><strong>Total:</strong>19,017.44</p>
-            <p><strong>Payment method:</strong>Debit Card</p>
-        </div>
-        <div class="footer">
-            <p>By Receiving this mail, It means that you have Subscribed to Our Email Service which does not carry any extra cost.<a href="#">Click here to Unsubscribe from Receiving our Emails</a></p>
-            <p>Questions? Visit <a href="#">Enquiries</a></p>
-            <p>See your <a href="#">Meal Order History</a>.</p>
-            <p>© 2025 07foods | All Rights Reserved.</p>
-        </div>
+      <div class="header">
+        <img
+          src="https://shorturl.at/nnxWl"
+          alt="Company Logo"
+          style="width: 300px; height: auto; margin: 0 auto; display: block"
+        />
+        <h1>Thank you</h1>
+        <p>Your Meal Purchase has been confirmed!</p>
+      </div>
+
+      <div class="details">
+        <p><strong>Order ID:</strong> [Order ID]</p>
+        <p><strong>Order date:</strong> <span id="current-time"></span></p>
+        <p><strong>Name:</strong>[User Name]</p>
+        <table>
+          <tr>
+            <th>Item</th>
+            <th>Qty</th>
+            <th>Unit Price</th>
+            <th>Total price</th>
+          </tr>
+          <tr>
+            <td>Cheese Burger</td>
+            <td>3</td>
+            <td>₦3,000</td>
+            <td>₦9,000</td>
+          </tr>
+          <tr>
+            <td>Egusi and Goat Meat</td>
+            <td>2</td>
+            <td>₦5,000</td>
+            <td>₦10,000</td>
+          </tr>
+        </table>
+        <p>
+          <strong>SubTotal:</strong> ₦19,000.00<br />(Includes VAT of ₦17.44)
+        </p>
+        <p><strong>Total:</strong>19,017.44</p>
+        <p><strong>Payment method:</strong>Debit Card</p>
+      </div>
+      <div class="footer">
+        <p>
+          By Receiving this mail, It means that you have Subscribed to Our Email
+          Service which does not carry any extra cost.<a href="#"
+            >Click here to Unsubscribe from Receiving our Emails</a
+          >
+        </p>
+        <p>Questions? Visit <a href="#">Enquiries</a></p>
+        <p>See your <a href="#">Meal Order History</a>.</p>
+        <p>© 2025 07foods | All Rights Reserved.</p>
+      </div>
     </div>
-</body>
+  </body>
 </html>
