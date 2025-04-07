@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Order Confirmation</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f7ff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        margin: 0;
+        padding: 20px;
+      }
+      .container {
+        display: flex;
+        max-width: 900px;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        background: white;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        border-radius: 10px;
+      }
+      .illustration {
+        display: none;
+      }
+      .card {
+        width: 100%;
+        max-width: 400px;
+        text-align: center;
+      }
+      .card h2 {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 5px;
+        color: #c91515;
+      }
+      .card p {
+        font-size: 14px;
+        color: #666;
+        margin-bottom: 10px;
+      }
+      .order-summary {
+        margin: 20px 0;
+        text-align: left;
+        font-size: 14px;
+        color: #333;
+      }
+      .order-summary h3 {
+        font-size: 18px;
+        font-weight: bold;
+        color: #b59f00;
+        margin-bottom: 10px;
+      }
+      .order-item {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 8px;
+      }
+      .order-item .item-name {
+        font-weight: bold;
+      }
+      .order-item .item-price {
+        color: #666;
+      }
+      .total {
+        font-weight: bold;
+        font-size: 16px;
+        color: #c91515;
+        text-align: right;
+        margin-top: 10px;
+      }
+      .button {
+        display: block;
+        width: 90%;
+        background-color: #c91515;
+        color: white;
+        text-decoration: none;
+        padding: 12px;
+        border-radius: 5px;
+        font-size: 16px;
+        font-weight: bold;
+        margin-top: 20px;
+      }
+      .button:hover {
+        background-color: #b59f00;
+      }
+      .support {
+        font-size: 14px;
+        color: #666;
+        margin-top: 10px;
+      }
+      .support a {
+        color: #c91515;
+        text-decoration: underline;
+      }
+      .support a:hover {
+        text-decoration: underline;
+      }
+      @media (min-width: 1024px) {
+        .illustration {
+          display: block;
+          width: 50%;
+        }
+        .illustration img {
+          width: 100%;
+          max-width: 300px;
+        }
+        .card {
+          width: 50%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="illustration">
+        <img
+          src="https://shorturl.at/nnxWl"
+          alt="Order Confirmation Illustration"
+        />
+      </div>
+      <div class="card">
+        <h2>Order Confirmation</h2>
+        <p>Thank you for your order!</p>
+        <h3>Hello, <span th:text="${userName}">User</span></h3>
+        <p>Your order has been successfully placed. Below are the details:</p>
+
+        <div class="order-summary">
+          <h3>Order Summary</h3>
+          <div class="order-item">
+            <span class="item-name">3 Cheese Burgers</span>
+            <span class="item-price">₦9,000</span>
+          </div>
+          <div class="order-item">
+            <span class="item-name">2 Egusi and Goat Meat</span>
+            <span class="item-price">₦10,000</span>
+          </div>
+          <div class="total">Total: ₦19,000</div>
+        </div>
+
+        <p>
+          Your order will be delivered to your specified address. If you have
+          any questions or concerns, please contact our support team.
+        </p>
+        <a th:href="#" class="button">View Order</a>
+        <p class="support">
+          Need help? <a href="mailto:support@07foods.com">Contact Support</a>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
