@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="format-detection"
+      content="telephone=no,date=no,address=no,email=no,url=no"
+    />
+    <title>Order Confirmation - 07 Foods</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+      :root {
+        --primary: #b59f00;
+        --primary-light: rgba(181, 159, 0, 0.1);
+        --accent: #b59f00;
+        --accent-light: rgba(181, 159, 0, 0.2);
+        --background: #eafbf0;
+        --white: #ffffff;
+        --text-dark: #1a2b2c;
+        --text-medium: #415657;
+        --text-light: #6e7878;
+        --border-light: #e5e7eb;
+        --success: #c91515;
+        --success-light: rgba(22, 163, 74, 0.1);
+        --warning: #f59e0b;
+        --warning-light: rgba(245, 158, 11, 0.1);
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Helvetica, Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: var(--background);
+        color: var(--text-dark);
+        line-height: 1.6;
+        font-size: 16px;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 40px 20px;
+      }
+
+      .email-wrapper {
+        background-color: var(--white);
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
+      }
+
+      .email-header {
+        background-color: rgba(181, 159, 0, 0.6);
+        padding: 30px 40px;
+        text-align: center;
+        position: relative;
+      }
+
+      .logo {
+        max-width: 150px;
+        height: auto;
+      }
+
+      .header-accent {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(
+          circle at 10% 20%,
+          rgba(255, 214, 45, 0.3) 0%,
+          transparent 30%
+        );
+      }
+
+      .email-body {
+        padding: 40px;
+      }
+
+      .email-footer {
+        background-color: #b59f00;
+        padding: 30px;
+        text-align: center;
+        font-size: 13px;
+      }
+      .email-footer p {
+        color: #ffffff !important;
+      }
+
+      .social-links {
+        margin: 25px 0;
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+      }
+
+      .social-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 36px;
+        height: 36px;
+        background-color: #c91515;
+        border-radius: 50%;
+        color: var(--white);
+        transition: all 0.2s ease;
+      }
+
+      .disclaimer {
+        font-size: 11px;
+        color: var(--text-light);
+        margin-top: 25px;
+        padding-top: 25px;
+        border-top: 1px solid var(--border-light);
+      }
+
+      .button {
+        display: inline-block;
+        padding: 14px 28px;
+        background-color: #b59f00;
+        color: var(--white) !important;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 15px;
+        transition: all 0.2s ease;
+        border: none;
+        cursor: pointer;
+        box-shadow: 0 4px 12px rgba(6, 77, 81, 0.2);
+      }
+
+      .button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 16px rgba(6, 77, 81, 0.25);
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        color: var(--primary);
+        margin-bottom: 16px;
+        font-weight: 600;
+        line-height: 1.3;
+      }
+
+      h1 {
+        font-size: 28px;
+        letter-spacing: -0.5px;
+      }
+
+      h2 {
+        font-size: 24px;
+        letter-spacing: -0.3px;
+      }
+
+      h3 {
+        font-size: 20px;
+      }
+
+      p {
+        margin-bottom: 16px;
+      }
+
+      .order-summary {
+        background-color: var(--white);
+        border-radius: 12px;
+        padding: 24px;
+        margin: 32px 0;
+        border: 1px solid var(--border-light);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+      }
+
+      .order-summary-title {
+        text-align: center;
+        margin-bottom: 16px;
+        color: #c91515;
+        font-size: 18px;
+        font-weight: 600;
+      }
+
+      .order-item {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 12px;
+      }
+
+      .order-item:last-child {
+        margin-bottom: 0;
+      }
+
+      .order-item-name {
+        font-weight: 600;
+        color: var(--text-dark);
+      }
+
+      .order-item-price {
+        color: var(--text-medium);
+      }
+
+      .total-amount {
+        font-size: 18px;
+        font-weight: 700;
+        color: #c91515;
+        text-align: right;
+        margin-top: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="email-wrapper">
+        <!-- Header with Logo -->
+        <div class="email-header">
+          <div class="header-accent"></div>
+          <img
+            src="https://shorturl.at/nnxWl"
+            alt="Company Logo"
+            style="width: 300px; height: auto; margin: 0 auto; display: block"
+          />
+        </div>
+
+        <!-- Email Body -->
+        <div class="email-body">
+          <h1>Order Confirmation</h1>
+          <p><strong>Order ID:</strong>[Order ID]</p>
+          <p>Dear <strong>[Name]</strong>,</p>
+          <p>
+            Thank you for your order! Your order has been successfully placed
+            and is being prepared for delivery. Below are the details of your
+            order:
+          </p>
+
+          <div class="order-summary">
+            <h3 class="order-summary-title">Order Summary</h3>
+
+            <div class="order-item">
+              <div class="order-item-name">3 Cheese Burgers</div>
+              <div class="order-item-price">₦9,000</div>
+            </div>
+
+            <div class="order-item">
+              <div class="order-item-name">2 Egusi and Goat Meat</div>
+              <div class="order-item-price">₦10,000</div>
+            </div>
+
+            <div class="total-amount">Total: ₦19,000</div>
+          </div>
+
+          <p>
+            Your order will be delivered to your specified location. If you have
+            any questions or need to make changes to your order, please contact
+            us at <strong>+91 XXXX XXX XXX</strong>.
+          </p>
+
+          <div style="text-align: center; margin-top: 32px">
+            <a href="#" class="button">View Your Order</a>
+          </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="email-footer">
+          <p>
+            <strong>07 Foods</strong><br />
+            123 Financial District, Suite 789<br />
+            Mumbai, Maharashtra 400001<br />
+            Customer Support: +91 XXXX XXX XXX
+          </p>
+
+          <div class="social-links">
+            <div class="social-icon">f</div>
+            <div class="social-icon">t</div>
+            <div class="social-icon">in</div>
+            <div class="social-icon">ig</div>
+          </div>
+
+          <p>© 2025 07 Foods. All Rights Reserved.</p>
+
+          <div class="disclaimer">
+            <p>
+              DISCLAIMER: Please read through our terms and conditions before
+              placing an order to avoid future issues.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
